@@ -1,8 +1,6 @@
 # CSC 4101 - Group Project
 
-**This is an group assignment. You can up to 2 team member to work on this project. Bonus part must be done individually.**
-
-**Update** : (10/31) To make things easier, you can assume that `-` and `-.` operators have white space before and after (e.g., `  -  ` and `  -.  `)
+**This is an group assignment. You can up to 2 team member to work on this project.**
 
 ## Introduction
 The goal of this project is to get you familiar with extend our programming language (CalcPL). 
@@ -13,7 +11,6 @@ You need to add the following.
 - Add same operators for float `+.`, `-.`, `*.`, `/.` (these opertors require both operands as float). 
 - float operator shoud support 2-decimal point precision. 
 - Handle new kind of errors (e.g., `1 + 1.0 ` is not allowed). 
-- Honors option/Bonus Points (5): Customize your operators and generate code on Generative-AI systems (ChatGP or Google Bard), **submit a separate report**. 
 
 ## Details
 
