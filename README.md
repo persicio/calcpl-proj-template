@@ -101,22 +101,5 @@ make_t "invalid guard_float" if_guard_err "if 1.0 then 2 else 3";
 make_t "invalid leq_float" bop_err "true <= 1.0";
 make_t "invalid geq_float" bop_err "true => 1.0";
 ```
-## Honors Option or Bonus Points
-Generative-AI tools (e.g., ChatGPT, Bard) are able to generate code for different languages. 
-In this part of the project, we want to experiment whether AI systems can generate a valid code our toy language. 
 
-1. Submission report you should contains (single PDF file): 
-    1. All the prompts and responses as screenshot (images or PDF). 
-    2. Details what kind of changes you made.
-    3. Screenshots of generated code failed or succeceded (you can do this by calling `interp` in `utop`). 
-2. There are **5 possible points**, we will grade your work based on variety of actions and diversity of prompts. 
-3. You can only use **ChatGPT, Google Bard, or LLAMA**. 
-
-### Tips
-When you make a change to your language you need to tell you AI system what are the specific changes or what type of features your language offer. 
-
-There are few trivial things to try:
-- Try re-ordering operator precedence.
-- Try to have ambigious kind of operator tokens. 
-- Try to ask generate possible expressions for specific output. 
-- If AI system generates some unavailable expressions, tell what kind of mistakes it made. 
+Good luck!
