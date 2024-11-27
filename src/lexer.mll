@@ -7,6 +7,7 @@ let digit = ['0'-'9']
 let int = '-'? digit+
 let letter = ['a'-'z' 'A'-'Z']
 let id = letter+
+let float = '-'? digit+ '.' digit+
 
 rule read = 
   parse
@@ -14,8 +15,15 @@ rule read =
   | "true" { TRUE }
   | "false" { FALSE }
   | "<=" { LEQ }
+  | ">=" { GEQ }
   | "*" { TIMES }
+  | "/" { DIVIDE }
   | "+" { PLUS }
+  | "-" { MINUS }
+  | "*." { TIMESF }
+  | "/." { DIVIDEF }
+  | "+." { PLUSF }
+  | "-." { MINUSF }
   | "(" { LPAREN }
   | ")" { RPAREN }
   | "let" { LET }
@@ -27,6 +35,8 @@ rule read =
   | ":" {COLON}
   | "int" {INT_TYPE}
   | "bool" {BOOL_TYPE}
+  | "float" {FLOAT_TYPE}
   | id { ID (Lexing.lexeme lexbuf) }
   | int { INT (int_of_string (Lexing.lexeme lexbuf)) }
+  | float { FLOAT (float_of_string (Lexing.lexeme lexbuf)) }
   | eof { EOF }

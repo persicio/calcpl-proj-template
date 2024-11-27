@@ -1,12 +1,20 @@
 type bop = 
   | Add
+  | Sub   
   | Mult
+  | Div   
   | Leq
+  | Geq
+  | AddF
+  | SubF   
+  | MultF
+  | DivF   
 
 (** [typ] represents the type of an expression. *)
 type typ =
   | TInt
   | TBool
+  | TFloat
 
 type expr = 
 | Var of string
